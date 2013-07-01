@@ -7,6 +7,15 @@
     <form id="validation-form" class="form-horizontal" method="post" action="users/admin/users/save/<?php echo $user->id?>" enctype="multipart/form-data">
         
 		<div class="control-group">
+		    <label class="control-label" for="username">สำนักงาน</label>
+		    <div class="controls">
+		    	<?php
+					echo form_dropdown('office_id',get_option('id','name','office'),$user->office_id,'id="office_id" class="span5"','--- เลือกสำนักงาน ---')
+		    	?>
+		    </div>
+		</div>
+		
+		<div class="control-group">
 		    <label class="control-label" for="username">ยูสเซอร์เนม</label>
 		    <div class="controls">
 		      <input id="username" class="span5" type="text" name="username" value="<?php echo $user->username?>">

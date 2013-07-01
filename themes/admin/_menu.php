@@ -15,8 +15,8 @@
     </div><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
-        
-        <li <?php echo menu_active('users','users',false,'active open')?><?php echo menu_active('permissions','permissions',FALSE,'active open')?>>
+    	        
+         <li <?php echo menu_active('users','users',false,'active open')?><?php echo menu_active('permissions','permissions',FALSE,'active open')?>>
           <a href="#" class="dropdown-toggle" >
             <i class="icon-user"></i>
             <span>User</span>
@@ -245,6 +245,13 @@
             <li <?php echo (@$_GET['module'] == 'หน่วยงานส่วนกลาง 1')?'class="active"':'';?>><a href="weblinks/admin/weblinks?module=หน่วยงานส่วนกลาง 1"><i class="icon-double-angle-right"></i> หน่วยงานส่วนกลาง 1</a></li>
             <li <?php echo (@$_GET['module'] == 'หน่วยงานส่วนกลาง 2')?'class="active"':'';?>><a href="weblinks/admin/weblinks?module=หน่วยงานส่วนกลาง 2"><i class="icon-double-angle-right"></i> หน่วยงานส่วนกลาง 2</a></li>
           </ul>
+        </li>
+        
+        <li <?php echo menu_active('demo',false,'index')?>>
+          <a href="demo/admin/demo/index">
+            <i class="icon-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
         </li>
         
         <!-- <li>---- demo ----</li>

@@ -6,7 +6,10 @@ class Demo extends Admin_Controller
     }
     
     function index(){
-        $this->template->build('admin/index');
+    		
+    	$data['contents'] = new Content();
+		$data['contents']->get(5);
+        $this->template->build('admin/index',$data);
     }
     
     function typography(){

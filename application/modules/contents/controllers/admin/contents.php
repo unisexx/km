@@ -24,6 +24,7 @@ class Contents extends Admin_Controller
         if($_POST)
         {
             $content = new Content($id);
+			
             // if($_FILES['image']['name'])
             // {
                 // if($content->id){
@@ -31,8 +32,9 @@ class Contents extends Admin_Controller
                 // }
                 // $_POST['image'] = $content->upload($_FILES['image'],'uploads/content/');
             // }
+            
 			if(!$id)$_POST['user_id'] = $this->session->userdata('id');
-			if(!$id)$_POST['status'] = "approve";
+			if(!$id)$_POST['status'] = "draft";
 			$_POST['slug'] = clean_url($_POST['title']);
 			$_POST['module'] = $_GET['module'];
             $content->from_array($_POST);

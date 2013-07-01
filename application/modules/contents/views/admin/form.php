@@ -43,6 +43,20 @@
             </div>
         </div>
         
+                <div class="control-group">
+            <label class="control-label" for="form-field-1">ลิงค์</label>
+            <div class="controls">
+                <input type="text" id="form-field-1" class="input-xxlarge" name="link" value="<?php echo $content->title?>">
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="form-field-1">แท็ก</label>
+            <div class="controls">
+                <input type="text" id="form-field-1" class="input-xxlarge" name="tag" value="<?php echo $content->title?>">
+            </div>
+        </div>
+        
         <div class="form-actions">
         	<?php echo form_referer() ?>
             <button class="btn btn-info" type="submit"><i class="icon-ok"></i> Submit</button>

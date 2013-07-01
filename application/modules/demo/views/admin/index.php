@@ -303,7 +303,21 @@
                 <div id="task-tab" class="tab-pane active">
                     <h4 class="smaller lighter green"><i class="icon-list"></i> Sortable Lists</h4>
                     <ul id="tasks" class="item-list">
-                        <li class="item-orange clearfix">
+                    	
+                    	<?php foreach ($contents as $row):?>
+                    	<li class="item-orange">
+                            <label class="inline"><input type="checkbox" /><span class="lbl"><?php echo $row->title?></span></label>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <a href="contents/admin/contents/form/<?php echo $row->id?>?module=<?php echo $row->module?>"><button class="btn btn-mini btn-info" ><i class="icon-edit"></i></button></a>
+                                    <button class="btn btn-mini btn-danger "><i class="icon-trash"></i></button>
+                                    <button class="btn btn-mini btn-yellow"><i class="icon-flag"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endforeach?>
+                        
+                        <!-- <li class="item-orange clearfix">
                             <label class="inline"><input type="checkbox" /><span class="lbl"> Answering customer questions</span></label>
                             <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
                                 <span class="percent">42</span>%
@@ -340,7 +354,8 @@
                         </li>
                         <li class="item-pink">
                             <label class="inline"><input type="checkbox" /><span class="lbl"> Cleaning up</span></label>
-                        </li>
+                        </li> -->
+                        
                     </ul>
                 </div>
                 
