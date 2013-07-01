@@ -1,7 +1,7 @@
 <?php
-class About extends ORM
+class Page extends ORM
 {
-	public $table = 'abouts';
+	public $table = 'pages';
 	
 	public function __construct($id = NULL)
 	{
