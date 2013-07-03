@@ -1,5 +1,5 @@
 <?php
-class Contents extends Admin_Controller
+class Meetings extends Admin_Controller
 {
 	
 	function __construct()
@@ -9,22 +9,25 @@ class Contents extends Admin_Controller
 	
 	function index()
 	{
-		$data['contents'] = new Content();
-		$data['contents']->where('module = "'.$_GET['module'].'"')->order_by('id','desc')->get();
+		$data['meeting'] = new Meeting();
+		$data['meeting']->order_by("start","desc")->get();
 		
 		$this->template->build('admin/index',$data);
 	}
 	
 	function form($id=FALSE)
 	{
-		$data['content'] = new Content($id);
+		$data['meeting'] = new Meeting($id);
+		
+		$this->template->append_metadata(js_datepicker());
 		$this->template->build('admin/form',$data);
 	}
 	
-	function save($id=false){
-        if($_POST)
+	function save()
+	{
+		if($_POST)
         {
-            $content = new Content($id);
+            $meeting = new Meeting($id);
 			
             // if($_FILES['image']['name'])
             // {
@@ -37,34 +40,33 @@ class Contents extends Admin_Controller
 			if(!$id)$_POST['user_id'] = $this->session->userdata('id');
 			if(!$id)$_POST['status'] = "draft";
 			$_POST['slug'] = clean_url($_POST['title']);
-			$_POST['module'] = $_GET['module'];
             $content->from_array($_POST);
             $content->save();
             set_notify('success', lang('save_data_complete'));
         }
         redirect($_POST['referer']);
-    }
+	}
 	
-	
-	function delete($id=false)
+	function delete()
 	{
 		if($id)
 		{
-			$content = new Content($id);
-			$content->delete();
+			$meeting = new Meeting($id);
+			$meeting->delete();
 			set_notify('success', lang('delete_data_complete'));
 		}
 		redirect($_SERVER['HTTP_REFERER']);
 	}
 	
-	function approve($id){
+	function approve($id)
+	{
         if($_POST)
         {
-            $content = new Content($id);
+            $content = new Meeting($id);
             $content->from_array($_POST);
             $content->save();
         }
-
-    }
+	}
+		
 }
 ?>

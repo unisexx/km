@@ -4,7 +4,7 @@
           <tr>
             <td width="10"><img src="themes/thaivbd/images/breadcrumb_left.png" width="10" height="26"></td>
             <td width="910" bgcolor="#ECECEC" class="imgleaf">
-            <div class="textbreadcrumb">เกี่ยวกับเรา</div>         
+            <div class="textbreadcrumb"><?php echo $page->name?></div>         
             <div class="location"><a href="home">หน้าแรก</a> &gt; <?php echo $page->name?></div>
             </td>
             <td width="10" align="right"><img src="themes/thaivbd/images/breadcrumb_right.png" width="10" height="26"></td>
@@ -12,7 +12,7 @@
           <tr>
               <td></td>
               <td class="content">
-                  <h1><?php echo $page->name?></h1>
+                  <!-- <h1><?php echo $page->name?></h1> -->
                   <?php echo $page->content?>
               </td>
               <td></td>

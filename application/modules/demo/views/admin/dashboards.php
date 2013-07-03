@@ -2,8 +2,8 @@
     <h1>Dashboard <small><i class="icon-double-angle-right"></i> overview & stats</small></h1>
 </div><!--/page-header-->
 
-<div class="row-fluid">
-<!-- PAGE CONTENT BEGINS HERE -->
+<!-- <div class="row-fluid"> -->
+	<!-- PAGE CONTENT BEGINS HERE -->
 
 <div class="alert alert-block alert-success">
  <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
@@ -11,275 +11,7 @@
  the lightweight, feature-rich, easy to use and well-documented admin template.
 </div>
 
-
-
 <div class="space-6"></div>
-<div class="row-fluid">
-
-
- <div class="span7 infobox-container">
-   
-    <div class="infobox infobox-green">
-        <div class="infobox-icon"><i class="icon-comments"></i></div>
-        <div class="infobox-data">
-            <span class="infobox-data-number">32</span>
-            <span class="infobox-content">comments + 2 reviews</span>
-        </div>
-        <div class="stat stat-success">8%</div>
-    </div>
-
-
-    <div class="infobox infobox-blue">
-        <div class="infobox-icon"><i class="icon-twitter"></i></div>
-        <div class="infobox-data">
-            <span class="infobox-data-number">11</span>
-            <span class="infobox-content">new followers</span>
-        </div>
-        <div class="badge badge-success">+32%</div>
-    </div>
-
-
-
-
-
-    <div class="infobox infobox-pink">
-        <div class="infobox-icon"><i class="icon-shopping-cart"></i></div>
-        <div class="infobox-data">
-            <span class="infobox-data-number">8</span>
-            <span class="infobox-content">new orders</span>
-        </div>
-        <div class="stat stat-important">4%</div>
-    </div>
-
-
-
-    <div class="infobox infobox-red">
-        <div class="infobox-icon"><i class="icon-beaker"></i></div>
-        <div class="infobox-data">
-            <span class="infobox-data-number">7</span>
-            <span class="infobox-content">experiemnts</span>
-        </div>
-    </div>
-
-
-
-    <div class="infobox infobox-orange2">
-        <div class="infobox-chart">
-            <span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
-        </div>
-        <div class="infobox-data">
-            <span class="infobox-data-number">6,251</span>
-            <span class="infobox-content">pageviews</span>
-        </div>
-        <div class="badge badge-success">7.2% <i class="icon-arrow-up"></i></div>
-    </div>
-    
-    
-    <div class="infobox infobox-blue2">
-        <div class="infobox-progress">
-            <div class="easy-pie-chart percentage" data-percent="42" data-size="46"><span class="percent">42</span>%
-            </div>
-        </div>
-        
-        <div class="infobox-data">
-            <span class="infobox-text">traffic used</span>
-            <span class="infobox-content"><span class="approx">~</span> 58GB remaining</span>
-        </div>
-    </div>
-
-    
-    <div class="space-6"></div>
-    
-        
-    <div class="infobox infobox-small infobox-dark infobox-green">
-        <div class="infobox-progress">
-            <div class="easy-pie-chart percentage" data-percent="61" data-size="39">
-                <span class="percent">61</span>%
-            </div>
-        </div>
-        <div class="infobox-data">
-            <span class="infobox-content"><b>Task</b></span>
-            <br />
-            <span class="infobox-content">Completion</span>
-        </div>
-    </div>
-    
-    <div class="infobox infobox-small infobox-dark infobox-blue">
-        <div class="infobox-chart">
-            <span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
-        </div>
-        <div class="infobox-data">
-            <span class="infobox-content"><b>Earnings</b></span>
-            <br />
-            <span class="infobox-content">$32,000</span>
-        </div>
-    </div>
-    
-    <div class="infobox infobox-small infobox-dark infobox-grey">
-        <div class="infobox-icon"><i class="icon-download-alt"></i></div>
-        <div class="infobox-data">
-            <span class="infobox-content"><b>Downloads</b></span>
-            <br />
-            <span class="infobox-content">1,205</span>
-        </div>
-    </div>
-
-
- </div>
-
-
- <div class="vspace"></div>
-
-
- <div class="span5">
-    <div class="widget-box">
-        <div class="widget-header widget-header-flat widget-header-small">
-            <h5><i class="icon-signal"></i> Traffic Sources</h5>
-            <div class="widget-toolbar no-border">
-                <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">This Week <i class="icon-angle-down icon-on-right"></i></button>
-                <ul class="dropdown-menu dropdown-info pull-right dropdown-caret">
-                    <li class="active"><a href="#">This Week</a></li>
-                    <li><a href="#">Last Week</a></li>
-                    <li><a href="#">This Month</a></li>
-                    <li><a href="#">Last Month</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="widget-body">
-         <div class="widget-main">
-            <div id="piechart-placeholder"></div>
-            
-            <div class="hr hr8 hr-double"></div>
-            
-            <div class="clearfix">
-                <div class="grid3">
-                    <span class="grey"><i class="icon-facebook-sign icon-2x blue"></i> &nbsp; likes</span>
-                    <h4 class="bigger pull-right">1,255</h4>
-                </div>
-                
-                <div class="grid3">
-                    <span class="grey"><i class="icon-twitter-sign icon-2x purple"></i> &nbsp; tweets</span>
-                    <h4 class="bigger pull-right">941</h4>
-                </div>
-                
-                <div class="grid3">
-                    <span class="grey"><i class="icon-pinterest-sign icon-2x red"></i> &nbsp; pins</span>
-                    <h4 class="bigger pull-right">1,050</h4>
-                </div>
-            </div>
-         </div><!--/widget-main-->
-        </div><!--/widget-body-->
-    </div><!--/widget-box-->
-
-
- </div><!--/span-->
- 
-
-</div><!--/row-->
-
-
-<div class="hr hr32 hr-dotted"></div>
-
-
-<div class="row-fluid">
-
-
-    <div class="span5">
-        <div class="widget-box transparent">
-            <div class="widget-header widget-header-flat">
-                <h4 class="lighter"><i class="icon-star orange"></i>Popular Domains</h4>
-                <div class="widget-toolbar">
-                    <a href="#" data-action="collapse"><i class="icon-chevron-up"></i></a>
-                </div>
-            </div>
-            
-            <div class="widget-body">
-             <div class="widget-main no-padding">
-              <table id="table_bug_report" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th><i class="icon-caret-right blue"></i>name</th>
-                        <th><i class="icon-caret-right blue"></i>price</th>
-                        <th class="hidden-phone"><i class="icon-caret-right blue"></i>status</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td class="">internet.com</td>
-                        <td>
-                            <small><s class="red">$29.99</s></small>
-                            <b class="green">$19.99</b>
-                        </td>
-                        <td class="hidden-phone"><span class="label label-info arrowed-right arrowed-in">on sale</span></td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="">online.com</td>
-                        <td>
-                            <b class="blue">$16.45</b>
-                        </td>
-                        <td class="hidden-phone"><span class="label label-success arrowed-in arrowed-in-right">approved</span></td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="">newnet.com</td>
-                        <td>
-                            <b class="blue">$15.00</b>
-                        </td>
-                        <td class="hidden-phone"><span class="label label-important arrowed">pending</span></td>
-                    </tr>
-                    <tr>
-                        <td class="">web.com</td>
-                        <td>
-                            <small><s class="red">$19.95</s></small>
-                            <b class="green">$14.99</b>
-                        </td>
-                        <td class="hidden-phone"><span class="label arrowed"><s>out of stock</s></span></td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="">domain.com</td>
-                        <td>
-                            <b class="blue">$12.00</b>
-                        </td>
-                        <td class="hidden-phone"><span class="label label-warning arrowed arrowed-right">SOLD</span></td>
-                    </tr>
-
-                </tbody>
-              </table>
-             </div><!--/widget-main-->
-            </div><!--/widget-body-->
-        </div><!--/widget-box-->
-    </div>
-
-
-    
-    <div class="span7">
-      <div class="widget-box transparent">
-        <div class="widget-header widget-header-flat">
-            <h4 class="lighter"><i class="icon-signal"></i> Sale Stats</h4>
-            <div class="widget-toolbar">
-                <a href="#" data-action="collapse"><i class="icon-chevron-up"></i></a>
-            </div>
-        </div>
-        
-        <div class="widget-body">
-         <div class="widget-main padding-5">
-            <div id="sales-charts"></div>
-         </div><!--/widget-main-->
-        </div><!--/widget-body-->
-      </div><!--/widget-box-->
-    </div>
-
-</div>
-
-
-
-<div class="hr hr32 hr-dotted"></div>
-
-
 
 <div class="row-fluid">
 
@@ -290,9 +22,10 @@
             <h4 class="lighter smaller"><i class="icon-rss orange"></i>RECENT</h4>
             <div class="widget-toolbar no-border">
                 <ul class="nav nav-tabs" id="recent-tab">
-                    <li class="active"><a data-toggle="tab" href="#task-tab">Tasks</a></li>
-                    <li><a data-toggle="tab" href="#member-tab">Members</a></li>
-                    <li><a data-toggle="tab" href="#comment-tab">Comments</a></li>
+                    <li class="active"><a data-toggle="tab" href="#task-tab">News</a></li>
+                    <li><a data-toggle="tab" href="#page-tab">Pages</a></li>
+                    <!-- <li><a data-toggle="tab" href="#member-tab">Members</a></li>
+                    <li><a data-toggle="tab" href="#comment-tab">Comments</a></li> -->
                 </ul>
             </div>
         </div>
@@ -300,11 +33,25 @@
         <div class="widget-body">
          <div class="widget-main padding-5">
             <div class="tab-content padding-8">
+            	
                 <div id="task-tab" class="tab-pane active">
                     <h4 class="smaller lighter green"><i class="icon-list"></i> Sortable Lists</h4>
                     <ul id="tasks" class="item-list">
+                    	
+                    	<?php foreach ($contents as $row):?>
+                    	<li class="item-orange">
+                            <label class="inline"><input type="checkbox" /><span class="lbl"><?php echo $row->title?></span></label>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <a href="contents/admin/contents/form/<?php echo $row->id?>?module=<?php echo $row->module?>"><button class="btn btn-mini btn-info" ><i class="icon-edit"></i></button></a>
+                                    <button class="btn btn-mini btn-danger "><i class="icon-trash"></i></button>
+                                    <button class="btn btn-mini btn-yellow"><i class="icon-flag"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endforeach?>
                         
-                        <li class="item-orange clearfix">
+                        <!-- <li class="item-orange clearfix">
                             <label class="inline"><input type="checkbox" /><span class="lbl"> Answering customer questions</span></label>
                             <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
                                 <span class="percent">42</span>%
@@ -341,12 +88,29 @@
                         </li>
                         <li class="item-pink">
                             <label class="inline"><input type="checkbox" /><span class="lbl"> Cleaning up</span></label>
-                        </li>
-                        
+                        </li> -->
                     </ul>
                 </div>
                 
-                
+                <div id="page-tab" class="tab-pane">
+                    <h4 class="smaller lighter green"><i class="icon-list"></i> Sortable Lists</h4>
+                    <ul id="tasks" class="item-list">
+                    	
+                    	<?php foreach ($pages as $page):?>
+                    	<li class="item-green">
+                            <label class="inline"><input type="checkbox" /><span class="lbl"><?php echo $page->name?></span></label>
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <a href="contents/admin/contents/form/<?php echo $page->id?>?module=<?php echo $page->name?>"><button class="btn btn-mini btn-info" ><i class="icon-edit"></i></button></a>
+                                    <button class="btn btn-mini btn-danger "><i class="icon-trash"></i></button>
+                                    <button class="btn btn-mini btn-yellow"><i class="icon-flag"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <?php endforeach?>
+                        
+                    </ul>
+                </div>
                 
                 <div id="member-tab" class="tab-pane">
                     <div class="clearfix">

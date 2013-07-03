@@ -31,9 +31,9 @@
             <li><a href="home">หน้าแรก</a></li>
             <li><a href="#">เกี่ยวกับเรา</a>
             	<ul>
-                	<li><a href="abouts/view/3">วิสัยทัศน์</a></li>
-                    <li><a href="abouts/view/2">โครงสร้างองค์กร</a></li>
-                    <li><a href="abouts/view/1">บุคคลากร</a></li>
+                	<li><a href="pages/view/3">วิสัยทัศน์</a></li>
+                    <li><a href="pages/view/2">โครงสร้างองค์กร</a></li>
+                    <li><a href="pages/view/1">บุคคลากร</a></li>
                 </ul>
             </li>
             <li><a href="#">สำหรับบุคลากร</a>
@@ -93,7 +93,7 @@
                     <li><a href="projects?title=แผนงาน/โครงการ&module=แผนงานด้าน Knowledge management">แผนงานด้าน Knowledge management</a></li>
               </ul>
             </li>
-            <li><a href="#">ติดต่อเรา</a></li>
+            <li><a href="pages/view/4">ติดต่อเรา</a></li>
         </ul>
         </td>
         <td width="17" height="41"><img src="themes/thaivbd/images/bg_topmenu_right.png" width="24" height="46" /></td>

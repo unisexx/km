@@ -418,7 +418,7 @@ class Template
 	 */
     public function set_breadcrumb($name, $uri = '')
     {
-    	$this->_breadcrumbs[] = array('name' => $name, 'uri' => $uri );
+    	$this->_breadcrumbs[] = array('name' => '$name', 'uri' => $uri );
         return $this;
     }
 

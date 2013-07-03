@@ -6,11 +6,19 @@ class Demo extends Admin_Controller
     }
     
     function index(){
-    		
-    	$data['contents'] = new Content();
-		$data['contents']->get(5);
         $this->template->build('admin/index',$data);
     }
+	
+	function dashboards(){
+    		
+    	$data['contents'] = new Content();
+		$data['contents']->where("module LIKE '%ข่าว%'")->get(10);
+		
+		$data['pages'] = new Page();
+ 		$data['pages']->where("slug != 'ติดต่อเรา'")->get(10);
+		
+		$this->template->build('admin/dashboards',$data);
+	}
     
     function typography(){
         $this->template->build('admin/typography');

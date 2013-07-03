@@ -15,6 +15,13 @@
     </div><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
+        
+        <li <?php echo menu_active('demo',false,'index')?>>
+          <a href="demo/admin/demo/dashboards">
+            <i class="icon-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
     	        
          <li <?php echo menu_active('users','users',false,'active open')?><?php echo menu_active('permissions','permissions',FALSE,'active open')?>>
           <a href="#" class="dropdown-toggle" >
@@ -70,6 +77,13 @@
             <li <?php echo (@$_GET['module'] == 'Hot issue')?'class="active"':'';?>><a href="contents/admin/contents?module=Hot issue"><i class="icon-double-angle-right"></i> Hot issue</a></li>
             <li <?php echo (@$_GET['module'] == 'ข่าวประกาศภายใน')?'class="active"':'';?>><a href="contents/admin/contents?module=ข่าวประกาศภายใน"><i class="icon-double-angle-right"></i> ข่าวประกาศภายใน</a></li>
           </ul>
+        </li>
+        
+        <li <?php echo (@$_GET['module'] == 'ประชุมสัมมนา')?'class="active open"':'';?>>
+          <a href="meetings/admin/meetings" >
+            <i class="icon-list-alt"></i>
+            <span>ประชุม / สัมมนา</span>
+          </a>
         </li>
         
         <li <?php echo (@$_GET['module'] == 'สาระน่ารู้' or @$_GET['module'] == 'วารสารโรคติดต่อนำโดยแมลง' or @$_GET['module'] == 'แนวทางและคู่มือปฏิบัติการ' or @$_GET['module'] == 'สื่อต้นแบบ' or @$_GET['module'] == 'งานวิจัย')?'class="active open"':'';?> <?php echo menu_active('albums','albums',FALSE,"active open")?> <?php echo menu_active('vdos','vdos',FALSE,"active open")?>>
@@ -156,7 +170,7 @@
           </ul>
         </li>
         
-        <li <?php echo (@$_GET['module'] == 'บุคลากร' or @$_GET['module'] == 'โครงสร้างองค์กร' or @$_GET['module'] == 'วิสัยทัศน์ พันธกิจ ยุทธศาสตร์')?'class="active open"':'';?>>
+        <!-- <li <?php echo (@$_GET['module'] == 'บุคลากร' or @$_GET['module'] == 'โครงสร้างองค์กร' or @$_GET['module'] == 'วิสัยทัศน์ พันธกิจ ยุทธศาสตร์')?'class="active open"':'';?>>
           <a href="#" class="dropdown-toggle" >
             <i class="icon-list-alt"></i>
             <span>เกี่ยวกับองค์กร</span>
@@ -166,6 +180,19 @@
             <li <?php echo (@$_GET['module'] == 'บุคลากร')?'class="active"':'';?>><a href="abouts/admin/abouts/form/1?module=บุคลากร"><i class="icon-double-angle-right"></i> บุคลากร</a></li>
             <li <?php echo (@$_GET['module'] == 'โครงสร้างองค์กร')?'class="active"':'';?>><a href="abouts/admin/abouts/form/2?module=โครงสร้างองค์กร"><i class="icon-double-angle-right"></i> โครงสร้างองค์กร</a></li>
             <li <?php echo (@$_GET['module'] == 'วิสัยทัศน์ พันธกิจ ยุทธศาสตร์')?'class="active"':'';?>><a href="abouts/admin/abouts/form/3?module=วิสัยทัศน์ พันธกิจ ยุทธศาสตร์"><i class="icon-double-angle-right"></i> วิสัยทัศน์ พันธกิจ ยุทธศาสตร์</a></li>
+          </ul>
+        </li> -->
+        
+        <li <?php echo (@$_GET['module'] == 'บุคลากร' or @$_GET['module'] == 'โครงสร้างองค์กร' or @$_GET['module'] == 'วิสัยทัศน์ พันธกิจ ยุทธศาสตร์')?'class="active open"':'';?>>
+          <a href="#" class="dropdown-toggle" >
+            <i class="icon-list-alt"></i>
+            <span>เกี่ยวกับองค์กร</span>
+            <b class="arrow icon-angle-down"></b>
+          </a>
+          <ul class="submenu">
+            <li <?php echo (@$_GET['module'] == 'บุคลากร')?'class="active"':'';?>><a href="pages/admin/pages/form/1?module=บุคลากร"><i class="icon-double-angle-right"></i> บุคลากร</a></li>
+            <li <?php echo (@$_GET['module'] == 'โครงสร้างองค์กร')?'class="active"':'';?>><a href="pages/admin/pages/form/2?module=โครงสร้างองค์กร"><i class="icon-double-angle-right"></i> โครงสร้างองค์กร</a></li>
+            <li <?php echo (@$_GET['module'] == 'วิสัยทัศน์ พันธกิจ ยุทธศาสตร์')?'class="active"':'';?>><a href="pages/admin/pages/form/3?module=วิสัยทัศน์ พันธกิจ ยุทธศาสตร์"><i class="icon-double-angle-right"></i> วิสัยทัศน์ พันธกิจ ยุทธศาสตร์</a></li>
           </ul>
         </li>
         
@@ -247,10 +274,10 @@
           </ul>
         </li>
         
-        <li <?php echo menu_active('demo',false,'index')?>>
-          <a href="demo/admin/demo/index">
-            <i class="icon-dashboard"></i>
-            <span>Dashboard</span>
+        <li <?php echo (@$_GET['module'] == 'ติดต่อเรา')?'class="active open"':'';?>>
+          <a href="pages/admin/pages/form/4?module=ติดต่อเรา" >
+            <i class="icon-list-alt"></i>
+            <span>หน้าติดต่อเรา</span>
           </a>
         </li>
         
