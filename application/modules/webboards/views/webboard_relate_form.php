@@ -65,6 +65,21 @@
 	}
 </style>
 
+<table border="0" cellpadding="0" cellspacing="0" style="padding-bottom: 5px;" >
+	<tr>
+		<td width="10"><img src="themes/thaivbd/images/breadcrumb_left.png" width="10" height="26"></td>
+		<td width="910" bgcolor="#ECECEC" class="imgleaf">
+            <div class="textbreadcrumb">เว็บบอร์ด</div>         
+            <div class="location">
+            	<a href="home">หน้าแรก</a> &gt; 
+            	<a href="webboards">เว็บบอร์ด</a> &gt; 
+            	แจ้งลบความเห็น
+            </div>
+		</td>
+		<td width="10" align="right"><img src="themes/thaivbd/images/breadcrumb_right.png" width="10" height="26"></td>
+	</tr>
+</table>
+
 <div id="container">
 <h1>แจ้งลบความเห็น</h1>
 <form action="webboards/save_relate" method="post" enctype="multipart/form-data">

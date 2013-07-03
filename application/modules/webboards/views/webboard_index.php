@@ -1,14 +1,23 @@
-<ul class="breadcrumb">
+<!-- <ul class="breadcrumb">
   <li><a href="home">หน้าแรก</a> <span class="divider">/</span></li>
   <li class="active">เว็บบอร์ด</li>
-</ul>
+</ul> -->
+
+<table>
+	<tr>
+		<td width="910" bgcolor="#ECECEC" class="imgleaf">
+            <div class="textbreadcrumb">เว็บบอร์ด</div>         
+            <div class="location"><a href="home">หน้าแรก</a> &gt; เว็บบอร์ด</div>
+		</td>
+	</tr>
+</table>
 
 <div id="webboardpage">
-	<h1 class="green">
+	<!-- <h1 class="green">
 		<span>เว็บบอร์ด</span>
 		<div class="corner_left"></div>
 		<div class="corner_right"></div>
-	</h1>
+	</h1> -->
 	<div id="data">
 		<table class="tbwebboard table">
 			<tbody>
@@ -30,3 +39,4 @@
 		</table>
 	</div>
 </div>
+

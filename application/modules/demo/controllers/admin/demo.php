@@ -6,13 +6,13 @@ class Demo extends Admin_Controller
     }
     
     function index(){
-        $this->template->build('admin/index',$data);
+        $this->template->build('admin/index');
     }
 	
 	function dashboards(){
     		
     	$data['contents'] = new Content();
-		$data['contents']->where("module LIKE '%ข่าว%'")->get(10);
+		$data['contents']->where("module LIKE '%ข่าว%'")->order_by('id','desc')->get(15);
 		
 		$data['pages'] = new Page();
  		$data['pages']->where("slug != 'ติดต่อเรา'")->get(10);

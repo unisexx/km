@@ -45,10 +45,12 @@
 		
 		<div class="control-group">
 		    <label class="control-label" for="province" class="span5">อำเภอ</label>
-		    <div id="amphur" class="controls">
-		       <?php
-					echo form_dropdown('amphur_id',(empty($user->province_id)) ? array() : get_option('id','amphur_name','amphures where province_id ='.$user->province_id),$user->amphur_id,'id="amphur_id" class="span5"','--- เลือกอำเภอ ---');
-		       ?>
+		    <div class="controls">
+		    	<div id="result_amphur">
+		    		<select>
+		    			<option>--- เลือกอำเภอ ---</option>
+		    		</select>
+		    	</div>
 		    </div>
 		</div>
 		
@@ -120,13 +122,22 @@
 <!-- PAGE CONTENT ENDS HERE -->
 </div>
 
-
 <!-- inline scripts related to this page -->
 <!-- Load TinyMCE -->
 <script type="text/javascript" src="media/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="media/tiny_mce/config.js"></script>
 <script type="text/javascript">
     tiny('detail');
+</script>
+
+<script>
+	$("#province_id").change(function(){
+			var province_id = $("#province_id").val();
+			$.get("users/admin/users/amphur_list/"+province_id,
+			function(data){
+				$("#result_amphur").html(data)
+			})
+	});
 </script>
 
 <script type="text/javascript">

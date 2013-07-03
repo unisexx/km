@@ -6,6 +6,7 @@
 <div class="row-fluid">
 <!-- PAGE CONTENT BEGINS HERE -->
     <form id="validation-form" class="form-horizontal" method="post" action="meetings/admin/meetings/save/<?php echo $meeting->id?>" enctype="multipart/form-data">
+    <?php echo form_hidden('status', 'draft');?>
         
         <div class="control-group">
             <label class="control-label" for="form-field-1">หัวข้อ</label>
@@ -24,9 +25,9 @@
         <div class="control-group">
             <label class="control-label" for="form-field-1">วันที่่สัมมนา</label>
             <div class="controls">
-                <input type="text" id="start" class="datepicker" name="start"  value="<?php echo $meeting->title?>" style="width:150px;" >
+                <input type="text" id="start" class="datepicker" name="start"  value="<?php echo $meeting->start?>" style="width:80px;" >
                 &nbsp;&nbsp;&nbsp;&nbsp; ถึง &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="text" id="end" class="datepicker" name="end"value="<?php echo $meeting->title?>" style="width:150px;" >
+                <input type="text" id="end" class="datepicker" name="end"value="<?php echo $meeting->end?>" style="width:80px;" >
             </div>
         </div>
         
@@ -36,6 +37,8 @@
             <button class="btn" type="reset"><i class="icon-undo"></i> Reset</button>
         </div>
         
+    </form>
+        
 <!-- PAGE CONTENT ENDS HERE -->
 </div>
 
@@ -44,26 +47,7 @@
 <script type="text/javascript" src="media/tiny_mce/config.js"></script>
 <script type="text/javascript">
     tiny('detail');
+    
+	$('.datepicker').datepicker();
+		
 </script>
-
-<!-- Datepicker -->
-<!-- <script type="text/javascript" >
-	$(function() {
-    $( "#start" ).datepicker({
-      changeMonth: true,
-      numberOfMonths: 3,
-      dateFormat: "yy-mm-dd",
-      onClose: function( selectedDate ) {
-        $( "#end" ).datepicker( "option", "minDate", selectedDate );
-      }
-    });
-    $( "#end" ).datepicker({
-      numberOfMonths: 3,
-      dateFormat: "yy-mm-dd",
-      onClose: function( selectedDate ) {
-        $( "#start" ).datepicker( "option", "maxDate", selectedDate );
-      }
-    });
-  });
-</script> -->
-

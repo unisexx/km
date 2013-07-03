@@ -19,7 +19,6 @@ class Meetings extends Admin_Controller
 	{
 		$data['meeting'] = new Meeting($id);
 		
-		$this->template->append_metadata(js_datepicker());
 		$this->template->build('admin/form',$data);
 	}
 	
@@ -40,8 +39,8 @@ class Meetings extends Admin_Controller
 			if(!$id)$_POST['user_id'] = $this->session->userdata('id');
 			if(!$id)$_POST['status'] = "draft";
 			$_POST['slug'] = clean_url($_POST['title']);
-            $content->from_array($_POST);
-            $content->save();
+            $meeting->from_array($_POST);
+            $meeting->save();
             set_notify('success', lang('save_data_complete'));
         }
         redirect($_POST['referer']);

@@ -14,6 +14,30 @@
               <td class="content">
                   <!-- <h1><?php echo $page->name?></h1> -->
                   <?php echo $page->content?>
+                  
+                  <?php if($page->id==4):?>
+                  	<table align="center" >
+                  		<form>
+                  			<tr>
+                  				<td><label>ชื่อ - นามสกุล</label></td>
+                  				<td><input type="text" name="name" /></td>
+                  			</tr>
+                  			<tr>
+                  				<td><label>อีเมล</label></td>
+                  				<td><input type="text" name="email" /></td>
+                  			</tr>
+                  			<tr valign="top">
+                  				<td><label>ข้อความ</label></td>
+                  				<td><textarea name="note" cols="40" rows="7" style="resize:none;"></textarea></td>
+                  			</tr>
+                  			<tr>
+                  				<td></td>
+                  				<td><button type="submit">ส่งข้อความ</button></td>
+                  			</tr>
+                  		</form>
+                  	</table>
+                  <?php endif?>
+                  
               </td>
               <td></td>
           </tr>

@@ -6,8 +6,19 @@ class Pages extends Public_Controller{
 	}
 	
 	function view($id){
+		
 	    $data['page'] = new Page($id);
+		
         $this->template->build('view',$data);
+	}
+	
+	function contact() {
+		
+		// PHP mailer
+		
+		$contact = new Contact($id);
+		$contact->from_array($_POST);
+		//$contact->save();
 	}
 }
 ?>

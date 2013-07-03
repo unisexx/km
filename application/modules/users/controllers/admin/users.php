@@ -12,6 +12,7 @@ class Users extends Admin_Controller
 	{
 		$data['users'] = new User;
 		$data['users']->where('level_id',2)->order_by('id','desc')->get();
+		
 		$this->template->build('admin/users/index',$data);
 	}
 	
@@ -57,9 +58,16 @@ class Users extends Admin_Controller
             $user = new User($id);
             $user->from_array($_POST);
             $user->save();
-        }
-
+		}
     }
+	
+	function amphur_list($id)
+	{
+		$data["amphur"] = new Amphur();
+		$data["amphur"]->where("province_id = $id")->order_by('id','asc')->get();
+		
+		$this->load->view('users/admin/users/amphur_list',$data);
+	}
 }
 
 ?>

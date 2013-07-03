@@ -1,18 +1,30 @@
 <style>
 .admin_action{font-size:12px;}
+.tbwebboard.clear.table {width: 98%;margin: 0 auto;}
 </style>
-<ul class="breadcrumb">
+<!-- <ul class="breadcrumb">
   <li><a href="home">หน้าแรก</a> <span class="divider">/</span></li>
   <li><a href="webboards">เว็บบอร์ด</a> <span class="divider">/</span></li>
   <li class="active"><?php echo $category->name?></li>
-</ul>
+</ul> -->
+
+<table border="0" cellpadding="0" cellspacing="0" style="padding-bottom: 5px;" >
+	<tr>
+		<td width="10"><img src="themes/thaivbd/images/breadcrumb_left.png" width="10" height="26"></td>
+		<td width="910" bgcolor="#ECECEC" class="imgleaf">
+            <div class="textbreadcrumb">เว็บบอร์ด</div>         
+            <div class="location"><a href="home">หน้าแรก</a> &gt; <a href="webboards">เว็บบอร์ด</a> <span class="divider">/ &gt; <?php echo $category->name?></div>
+		</td>
+		<td width="10" align="right"><img src="themes/thaivbd/images/breadcrumb_right.png" width="10" height="26"></td>
+	</tr>
+</table>
 
 <div id="webboardpage">
-	<h1 class="green">
+	<!-- <h1 class="green">
 		<span>เว็บบอร์ด</span>
 		<div class="corner_left"></div>
 		<div class="corner_right"></div>
-	</h1>
+	</h1> -->
 	<div id="data">
 		<div class="addtopic right"><a href="webboards/newtopic/<?echo $category_id?>/normal"><img src="media/images/webboard/btn_newpost.png" height="29" width="102" style="margin-bottom:10px;"></a></div><br clear="all">
 		<table class="tbwebboard clear table">

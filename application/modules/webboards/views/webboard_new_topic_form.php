@@ -1,35 +1,13 @@
 <style type="text/css">
-table.form td {
-padding:5px;
-}
-table.form th {
-padding:5px;
-text-align:right;
-vertical-align:middle;
-white-space:nowrap;
-}
-table.form th.top {
-vertical-align:top;
-}
-table.form select {
-width:250px;
-}
-table.form textarea {
-height:100px;
-width:250px;
-}
-table.form input.full[type="text"] {
-width:500px;
-}
-table.form textarea.full {
-width:840px;
-}
-table.form .img {
-border:1px solid #CCCCCC;
-}
-table.form td .cirkuitSkin td.mceToolbar {
-padding:1px 0 2px;
-}
+table.form td {padding:5px;}
+table.form th {padding:5px;text-align:right;vertical-align:middle;white-space:nowrap;}
+table.form th.top {vertical-align:top;}
+table.form select {width:250px;}
+table.form textarea {height:100px;width:250px;}
+table.form input.full[type="text"] {width:500px;}
+table.form textarea.full {width:840px;}
+table.form .img {border:1px solid #CCCCCC;}
+table.form td .cirkuitSkin td.mceToolbar {padding:1px 0 2px;}
 </style>
 
 <script type="text/javascript">
@@ -45,13 +23,21 @@ padding:1px 0 2px;
 <script type="text/javascript" src="media/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="media/tiny_mce/tinymce.js"></script>
 
-<ul class="breadcrumb">
-  <li><a href="home">หน้าแรก</a> <span class="divider">/</span></li>
-  <li><a href="webboards">เว็บบอร์ด</a> <span class="divider">/</span></li>
-  <li><a href="webboards/category/<?php echo $categories->id?>"><?php echo lang_decode($categories->name,'')?></a> <span class="divider">/</span></li>
-  <li class="active">ตั้งกระทู้ใหม่</li>
-</ul>
-
+<table border="0" cellpadding="0" cellspacing="0" style="padding-bottom: 5px;" >
+	<tr>
+		<td width="10"><img src="themes/thaivbd/images/breadcrumb_left.png" width="10" height="26"></td>
+		<td width="910" bgcolor="#ECECEC" class="imgleaf">
+            <div class="textbreadcrumb">เว็บบอร์ด</div>         
+            <div class="location">
+            	<a href="home">หน้าแรก</a> &gt; 
+            	<a href="webboards">เว็บบอร์ด</a> &gt; 
+            	<a href="webboards/category/<?php echo $categories->id?>">ประกาศ</a> &gt; 
+            	ตั้งกระทู้ใหม่
+            </div>
+		</td>
+		<td width="10" align="right"><img src="themes/thaivbd/images/breadcrumb_right.png" width="10" height="26"></td>
+	</tr>
+</table>
 
 <div id="webboardpage">
 	<h1>ตั้งกระทู้ใหม่</h1>
