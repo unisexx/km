@@ -274,6 +274,13 @@
           </ul>
         </li>
         
+        <li <?php echo (@$_GET['module'] == 'เมนู')?'class="active open"':'';?>>
+          <a href="menu/admin/menu?module=เมนู" >
+            <i class="icon-list-alt"></i>
+            <span>เมนู</span>
+          </a>
+        </li>
+        
         <li <?php echo (@$_GET['module'] == 'ติดต่อเรา')?'class="active open"':'';?>>
           <a href="pages/admin/pages/form/4?module=ติดต่อเรา" >
             <i class="icon-list-alt"></i>

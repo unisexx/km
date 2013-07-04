@@ -20,8 +20,11 @@
 		 <input type="password" name="Password" class="input_boxLogin" title="Password"  placeholder="">
          <input name="btn_login" class="btn_login" >
          <br><label id="linkRegis"><a href="#" class="linkRegis">ลืมรหัสผ่าน</a> | <a href="#" class="linkRegis">สมัครสมาชิก</a></label>
-    </form></div>
+    </form>
+</div>
+    
 <div class="clr"></div>
+
 <div id="topmenu">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -99,4 +102,6 @@
         <td width="17" height="41"><img src="themes/thaivbd/images/bg_topmenu_right.png" width="24" height="46" /></td>
       </tr>
   </table>
-</div><div class="clr"></div>
+</div>
+
+<div class="clr"></div>

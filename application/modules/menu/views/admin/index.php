@@ -3,7 +3,7 @@
 </div><!--/page-header-->
 
 <div class="row-fluid">
-<!-- PAGE CONTENT BEGINS HERE -->
+<!-- PAGE CONTENTS BEGINS HERE -->
 
 <div class="row-fluid">
     <div class="span12">
@@ -11,17 +11,16 @@
             <thead>
                 <tr>
                     <th width="40">สถานะ</th>
-                    <th>หัวข้อ</th>
-					<th>เขียนโดย</th>
-					<th width="40">ไฮไลท์</th>
-					<th>วันที่สร้าง</th>
-					<th>แก้ไขล่าสุด</th>
-                    <th><a class="btn btn-mini btn-primary" href="contents/admin/contents/form?module=<?php echo $_GET['module']?>"><i class="icon-pencil"></i> เพิ่มรายการ </a></th>
+                    <th>ชื่อเมนู</th>
+                    <th>Parent</th>
+                    <th>วันที่สร้าง</th>
+                    <th>แก้ไขล่าสุด</th>
+                    <th><a class="btn btn-mini btn-primary" href="menu/admin/menu/form?module=<?php echo $_GET['module']?>"><i class="icon-pencil"></i> เพิ่มรายการ </a></th>
                 </tr>
             </thead>
                                     
             <tbody>
-            <?php foreach($contents as $row):?>
+            <?php foreach($menu as $row):?>
                 <tr>
                     <td>
                         <label>
@@ -29,21 +28,20 @@
                         </label>
                     </td>
                     <td><?php echo $row->title?></td>
-					<td><?php echo $row->user->username?></td>
-					<td><input class="ace-switch ace-switch-4 .hilight" type="checkbox" name="hilight" value="<?php echo $row->id ?>" <?php echo ($row->hilight=="1")?'checked="checked"':'' ?>/><span class="lbl"></span></td>
+                    <td><?php echo $row->parent?></td>
 					<td><?php echo mysql_to_th($row->created,'S',TRUE) ?></td>
 			        <td><?php echo mysql_to_th($row->updated,'S',TRUE) ?></td>
                     <td>
                         <div class='hidden-phone visible-desktop btn-group'>
-                            <a href="contents/admin/contents/form/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class='btn btn-mini btn-info'><i class='icon-edit'></i></a>
-                            <a class='btn btn-mini btn-danger' href="contents/admin/contents/delete/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" onclick="return confirm('<?php echo lang('notice_confirm_delete');?>')"><i class='icon-trash'></i></a>
+                            <a href="menu/admin/menu/form/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class='btn btn-mini btn-info'><i class='icon-edit'></i></a>
+                            <a class='btn btn-mini btn-danger' href="menu/admin/menu/delete/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" onclick="return confirm('<?php echo lang('notice_confirm_delete');?>')"><i class='icon-trash'></i></a>
                         </div>
                         <div class='hidden-desktop visible-phone'>
                             <div class="inline position-relative">
                                 <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down icon-only"></i></button>
                                 <ul class="dropdown-menu dropdown-icon-only dropdown-yellow pull-right dropdown-caret dropdown-close">
-                                    <li><a href="contents/admin/contents/form/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class="tooltip-success" data-rel="tooltip" title="Edit" data-placement="left"><span class="green"><i class="icon-edit"></i></span></a></li>
-                                    <li><a href="contents/admin/contents/delete/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class="tooltip-error" data-rel="tooltip" title="Delete" data-placement="left" onclick="return confirm('<?php echo lang('notice_confirm_delete');?>')"><span class="red"><i class="icon-trash"></i></span> </a></li>
+                                    <li><a href="menu/admin/menu/form/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class="tooltip-success" data-rel="tooltip" title="Edit" data-placement="left"><span class="green"><i class="icon-edit"></i></span></a></li>
+                                    <li><a href="menu/admin/menu/delete/<?php echo $row->id?>?module=<?php echo $_GET['module']?>" class="tooltip-error" data-rel="tooltip" title="Delete" data-placement="left" onclick="return confirm('<?php echo lang('notice_confirm_delete');?>')"><span class="red"><i class="icon-trash"></i></span> </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -56,7 +54,7 @@
     </div><!--/span-->
 </div><!--/row-->
 
-<!-- PAGE CONTENT ENDS HERE -->
+<!-- PAGE menu ENDS HERE -->
 </div>
 
 <script type="text/javascript">
@@ -66,7 +64,7 @@ $(document).ready(function(){
         var name = $(this).attr("name");
         var jsonOptions= {};
         jsonOptions[name]= value;
-        $.post("contents/admin/contents/approve/" + this.value,jsonOptions);
+        $.post("menu/admin/menu/approve/" + this.value,jsonOptions);
     });
     
     $("input:checkbox .hilight").click(function(){
@@ -74,13 +72,13 @@ $(document).ready(function(){
         var name = $(this).attr("name");
         var jsonOptions= {};
         jsonOptions[name]= value;
-        $.post("contents/admin/contents/approve/" + this.value,jsonOptions);
+        $.post("menu/admin/menu/approve/" + this.value,jsonOptions);
     });
     
     var oTable1 = $('#table_report').dataTable( {
     "aoColumns": [
       { "bSortable": false },
-      null, null,null, null,null,
+      null, null,null, null,
       { "bSortable": false }
     ] } );
     
