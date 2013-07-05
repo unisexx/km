@@ -11,6 +11,53 @@
  * @return		string
  */
  
+function menu_list_link($root,$list)
+{
+	echo "<tr>";
+	
+	echo "<td><label><input class=ace-switch ace-switch-4 type=checkbox name=status value=".$root->id;
+	echo "($root->status=='approve')?checked=checked><span class=lbl></span></td>";
+	
+	echo "<td>".$root->title."</td>";
+	echo "<td>".mysql_to_th($root->created,'s',TRUE)."</td>";
+	echo "<td>".mysql_to_th($root->updated,'s',TRUE)."</td>";
+	echo "<td></td>";
+	
+	echo "</tr>";	
+}
+ 
+function menu_list($root,$list)
+{
+	echo "<ul>";
+	foreach($root as $a)
+	{
+		echo "<li>".$a->title;
+		foreach($list as $b)
+		{
+			if($b->parent==$a->id)
+			{
+			echo "<ul>";
+			echo "<li>".$b->title;
+			
+			foreach($list as $c)
+			{
+				if($c->parent==$b->id)
+				{
+					echo "<ul>";
+					echo "<li>".$c->title;
+					echo "</li>";
+					echo "</ul>";
+				}
+			}
+			
+			echo "</li>";
+			echo "</ul>";
+			}
+		}
+		echo "</li>";
+	}
+}
+ 
 function form_dropdown($name = '', $options = array(), $selected = array(), $extra = '',$default_value = FALSE)
 {
 	if ( ! is_array($selected))

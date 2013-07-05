@@ -64,7 +64,6 @@ class Contents extends Admin_Controller
             $content->from_array($_POST);
             $content->save();
         }
-
     }
 }
 ?>

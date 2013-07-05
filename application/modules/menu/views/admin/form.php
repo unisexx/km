@@ -5,7 +5,7 @@
 <div class="row-fluid">
 <!-- PAGE CONTENT BEGINS HERE -->
 
-    <form id="validation-form" class="form-horizontal" method="post" action="menu/admin/menu/debug/<?php echo $data->id?>?module=<?php echo $_GET['module']?>" enctype="multipart/form-data">
+    <form id="validation-form" class="form-horizontal" method="post" action="menu/admin/menu/save/<?php echo $data->id?>?module=<?php echo $_GET['module']?>" enctype="multipart/form-data">
         
         <!-- <div class="control-group">
             <label class="control-label" for="id-input-file-1">ภาพประกอบข่าว</label>
@@ -38,11 +38,52 @@
         </div>
         
 	    <div class="control-group">
-	        <label class="control-label" for="form-field-1">เมนู</label>
+	        <label class="control-label" for="form-field-1">เมนูย่อย</label>
 	        <div class="controls">
-	       		<?php form_sub_menu('parent',$menu->id,$menu->title) ?>
+	        	<select name="parent">
+            	<option value="">--- เลือกเมนูย่อย ---</option>
+					<?php foreach($menu as $row):?>
+						<option value="<?php echo $row->id?>"><?php echo $row->title?></option>
+						
+						<?php foreach($sub as $rows):?>
+							<?php if($rows->parent==$row->id):?>
+								<option value="<?php echo $rows->id?>"><?php echo "--- ".$rows->title?></option>
+								
+								<?php foreach($sub as $c):?>
+									<?php if($c->parent==$rows->id):?>
+										<option value="<?php echo $c->id?>"><?php echo "------ ".$c->title?></option>
+									<?php endif?>
+								<?php endforeach?>
+								
+							<?php endif?>
+						<?php endforeach?>
+						
+					<?php endforeach?>
+				</select>
 	        </div>
 	    </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="form-field-1">ลิงค์</label>
+            <div class="controls">
+            	<select name="url" >
+            	<option value="">--- เลือกลิงค์ ---</option>
+				<?php foreach($categorie as $num):?>
+					
+					<option value="<?php echo $num->id?>"><?php echo $num->module?></option>
+					
+					<?php foreach($content as $nums):?>
+						
+						<?php if($nums->module==$num->module):?>
+							<option value="<?php echo $nums->id?>">-----&nbsp;<?php echo $nums->title?></option>
+						<?php endif?>
+						
+					<?php endforeach?>
+					
+				<?php endforeach?>
+				</select>
+            </div>
+        </div>
         
         <div class="form-actions">
         	<?php echo form_referer() ?>
