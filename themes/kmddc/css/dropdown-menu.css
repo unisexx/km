@@ -1,0 +1,37 @@
+/*
+ * @freebie: dropdown-menu
+ * @author: Francisco Neves
+ */
+
+ul.dropdown-menu li ul{	display: none; list-style: none; text-align: left;}
+
+ul.dropdown-menu li:hover ul{display: table;margin: 0 auto;	}
+
+ul.dropdown-menu{padding: 0 20px;list-style: none;position: relative;display: table;padding: 0;	margin: 0;}
+
+ul.dropdown-menu::after{content: ""; display: table;	margin: 0 auto;}
+
+ul.dropdown-menu ul > li:hover{	background:#e9f5d4;}
+
+ul.dropdown-menu li:hover a{color: #676767;}
+
+ul.dropdown-menu li a{display: block;	color: #757575;	text-decoration: none;}
+
+ul.dropdown-menu > li{border-bottom: 1px dotted #c2cfcc;}
+
+ul.dropdown-menu > li > a{color: #4a4949;background-color: #c5c5c5; position: relative;padding: 5px 5px;
+	 z-index: 5; font-size: 13px; color:#3f3e3e;font-weight:bold; background: url(../images/arrowdown1.png) no-repeat; background-position:right 5px;}
+
+ul.dropdown-menu > li > a:hover{color:#09941d; font-weight:bold;font-size: 13px;background: url(../images/arrowup1.png) no-repeat; background-position:right 5px;}
+
+ul.dropdown-menu > li > a > img{float: right;border: none;}
+
+ul.dropdown-menu ul{border-radius: 0px;	padding: 0;}
+
+ul.dropdown-menu ul li{	float: none; position: relative;border-bottom: 1px solid transparent;}
+
+ul.dropdown-menu ul li a{font-size: 13px;padding:3px;	color:#3f3e3e;	width: 130px;}
+
+ul.dropdown-menu ul li:hover{color:#3f3e3e; font-weight:normal;}
+
+ul.dropdown-menu ul li:last-child:hover{border-bottom: none; color:#09941d}

@@ -5,11 +5,11 @@ class Contents extends Public_Controller
     {
         parent::__construct();
     }
-    
+	
 	// ข่าว Highlights
     function inc_hilight(){
     	$data['contents'] = new Content();
-		$data['contents']->where('hilight = "1"')->order_by('id','desc')->get(5);
+		$data['contents']->where("hilight = '1'")->order_by('id','desc')->get(5);
 		
 		$this->load->view('inc_hilight',$data);
     }

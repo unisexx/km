@@ -30,7 +30,7 @@
                     </td>
                     <td><?php echo $row->title?></td>
 					<td><?php echo $row->user->username?></td>
-					<td><input class="ace-switch ace-switch-4 .hilight" type="checkbox" name="hilight" value="<?php echo $row->id ?>" <?php echo ($row->hilight=="1")?'checked="checked"':'' ?>/><span class="lbl"></span></td>
+					<td><input class="ace-switch ace-switch-4" id="hilight" type="checkbox" name="hilight" value="<?php echo $row->id ?>" <?php echo ($row->hilight=="1")?'checked="checked"':'' ?>/><span class="lbl"></span></td>
 					<td><?php echo mysql_to_th($row->created,'S',TRUE) ?></td>
 			        <td><?php echo mysql_to_th($row->updated,'S',TRUE) ?></td>
                     <td>
@@ -69,7 +69,7 @@ $(document).ready(function(){
         $.post("contents/admin/contents/approve/" + this.value,jsonOptions);
     });
     
-    $("input:checkbox .hilight").click(function(){
+    $("input#hilight").click(function(){
         var value = this.checked ? "1" : "0";
         var name = $(this).attr("name");
         var jsonOptions= {};

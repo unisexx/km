@@ -14,9 +14,6 @@ Class Menu extends Admin_Controller
 		$data["sub"] = new Menus();
 		$data["sub"]->get();
 		
-		$data["sub2"] = new Menus();
-		$data["sub2"]->get();
-		
 		$this->template->build('admin/index',$data);
 	}
 	
@@ -78,48 +75,6 @@ Class Menu extends Admin_Controller
 			set_notify('success', lang('delete_data_complete'));
 		}
 		redirect($_SERVER["HTTP_REFERER"]);
-	}
-	
-	function debug($id=FALSE)
-	{
-		if($_POST){
-			echo var_dump($_POST);
-			echo "<br>";
-			if($_POST["parent"]=='')
-			{
-				echo "Parent Fail<br>";
-			}
-			else {
-				echo "Parent is ".$_POST["parent"];
-				echo "<br>";
-			}
-			if($_POST["url"]=='')
-			{
-				echo "URL Fail<br>";
-			}
-			else {
-				echo "URL is <a href=".site_url("pages/view/".$_POST["url"]." target=_blank >".site_url("pages/view/".$_POST['url'])."</a>");
-			}
-		}
-	}
-	
-	function test()
-	{	
-		$data['menu'] = new Menus();
-		$data['menu']->where("parent = 0")->get();
-		
-		$data["sub"] = new Menus();
-		$data["sub"]->get();
-				
-		$data["categorie"] = new Content();
-		$data["categorie"]->distinct('');
-		$data["categorie"]->select("module");
-		$data["categorie"]->get();
-		
-		$data["content"] = new Content();
-		$data["content"]->get();
-		
-		$this->load->view("admin/test",$data);
 	}
 	
 }

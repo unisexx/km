@@ -1,33 +1,19 @@
-<div id="col1">
-<div id="highlight">
- 	<table border="0" cellpadding="0" cellspacing="0">
-		  <tr>
-			<td valign="top">
-				<div id="slider" >
-					<ul id="run_highLight">
-						
-						<?php foreach($contents as $content):?>
-							<li style="display:none;">
-								<a href="contents/view/<?php echo $content->id?>"><img src="<?php echo $content->image?>" width="531" height="212" border="0"></a>								
-							</li>
-						<?php endforeach;?>
-						
-			    	</ul>
-				</div>
-          	  <div id="run">
-	                <ul>
-	                	
-	                	<?php foreach($contents as $content):?>
-	                		<li><a href="#">&nbsp;</a></li>
-	                	<?php endforeach;?>
-	                	
-	                </ul>
-              </div>
-            </td>
-      </tr>
-   </table>
+<div id="slider" >
+	<ul id="run_highLight">
+		<li id="run_highLight"><a href="<?php echo base_url("contents/").$contents->id?>"><img src="<?php echo $contents->image?>" width="970" height="266" border="0"></a></li>
+	</ul>
 </div>
+<div id="run">
+    <ul>
+      <li><a href="#" class="active">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+    </ul>
 </div>
+<hr class="hr1"/>
+<div class="clr"></div>
 
 <script type="text/javascript">
 $(document).ready(function(){
